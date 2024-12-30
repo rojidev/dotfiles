@@ -1,0 +1,58 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha"
+  },
+  // The name of a font to use for rendering text in the editor
+  "buffer_font_family": "Maple Mono NF",
+  // Set the buffer text's font fallbacks, this will be merged with
+  // the platform's default fallbacks.
+  "buffer_font_fallbacks": ["Twemoji"],
+  // The OpenType features to enable for text in the editor.
+  "buffer_font_features": {
+    // Disable ligatures:
+    "calt": false
+  },
+  "lsp": {
+    "discord_presence": {
+      "initialization_options": {
+        // application id for the rich presence (required, keep it if you don't know what you're doing)
+        "application_id": "1263505205522337886",
+        // Base url for all language icons
+        "base_icons_url": "https://raw.githubusercontent.com/xhyrom/zed-discord-presence/main/assets/icons/",
+
+        "state": "working on {filename}",
+        "details": "",
+        // URL for large image
+        "large_image": "{base_icons_url}/zed.png",
+        "large_text": "zed", // :u makes first letter upper-case
+        // URL for small image
+        "small_image": "{base_icons_url}/{language}.png",
+        "small_text": "{language:u}",
+
+        // Rules - disable presence in some workspaces
+        "rules": {
+          "mode": "blacklist", // or whitelist
+          "paths": ["absolute path"]
+        },
+
+        "git_integration": true
+      }
+    }
+  }
+}
